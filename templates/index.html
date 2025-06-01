@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini IDE - Analizador</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="watermark">Desarrollado por Dania Jazmin Martinez Benitez</div>
+    <div class="container">
+        <header>
+            <h2 class="course-title">Lenguajes y Autómatas I</h2>
+            <h1><i class="fas fa-code"></i> Mini IDE</h1>
+            <p class="subtitle">Analizador Léxico, Sintáctico y Máquina de Turing</p>
+        </header>
+
+        <main>
+            <div class="editor-section">
+                <div class="editor-header">
+                    <span><i class="fas fa-edit"></i> Editor de Código</span>
+                </div>
+                <div class="editor-container">
+                    <div class="line-numbers" id="line-numbers"></div>
+                    <textarea id="code" placeholder="Escribe tu código aquí..." spellcheck="false"></textarea>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button onclick="runAnalysis('lexico')" class="btn btn-lexical">
+                    <i class="fas fa-search"></i> Analizador Léxico
+                </button>
+                <button onclick="runAnalysis('sintactico')" class="btn btn-syntactic">
+                    <i class="fas fa-cubes"></i> Analizador Sintáctico
+                </button>
+                <button onclick="runAnalysis('turing')" class="btn btn-turing">
+                    <i class="fas fa-robot"></i> Máquina de Turing
+                </button>
+            </div>
+
+            <div class="results-container">
+                <div class="result-box card" id="lexical-analysis">
+                    <div class="card-header">
+                        <h2><i class="fas fa-search"></i> Análisis Léxico</h2>
+                    </div>
+                    <div class="card-body">
+                        <table id="token-table">
+                            <thead>
+                                <tr>
+                                    <th>Valor</th>
+                                    <th>Tipo</th>
+                                    <th>Línea</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <div id="lex-errors" class="error-container"></div>
+                    </div>
+                </div>
+
+                <div class="result-box card" id="syntactic-analysis">
+                    <div class="card-header">
+                        <h2><i class="fas fa-cubes"></i> Análisis Sintáctico</h2>
+                    </div>
+                    <div class="card-body">
+                        <div id="parse-result"></div>
+                        <ul id="parse-errors" class="error-container"></ul>
+                    </div>
+                </div>
+
+                <div class="result-box card" id="tm-result">
+                    <div class="card-header">
+                        <h2><i class="fas fa-robot"></i> Máquina de Turing</h2>
+                    </div>
+                    <div class="card-body">
+                        <div id="turing-output"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
