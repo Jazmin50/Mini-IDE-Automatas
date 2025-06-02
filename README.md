@@ -53,10 +53,10 @@
 
 ## 📋 Datos del estudiante
 
-| **Nombre**  | Martinez Benitez Dania Jazmin |
-|------------|------------------------------|
-| **Materia**| Lenguajes y Autómatas I      |
-| **Profesor**| Kevin David Molina Gomez     |
+- *Estudiante:* Martinez Benitez Dania Jazmin
+- *Materia:* Lenguajes y Autómatas I
+- *Horario:* 15:00 - 16:00
+- *Docente:* Molina Gomez Kevin David
 
 ## 💻 Interfaz Gráfica del IDE
 
