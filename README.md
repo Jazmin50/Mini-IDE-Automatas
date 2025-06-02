@@ -294,6 +294,11 @@ La máquina de Turing proporciona una validación formal de cadenas binarias, as
 
 ---
 
+## 📝 Conclusión
+
+Este proyecto, desarrollado para la materia de Lenguajes y Autómatas I, tiene un propósito puramente académico y educativo, sirviendo como una herramienta práctica para comprender mejor los conceptos fundamentales de la teoría de autómatas y lenguajes formales.
+
+---
 
 <div align="center">
   <p>Desarrollado por Dania Jazmin Martinez Benitez</p>
